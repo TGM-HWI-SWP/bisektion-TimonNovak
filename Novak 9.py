@@ -58,4 +58,4 @@ if __name__ == "__main__":
         laenge = berechne_seillaenge(radius_a, 100.0)
         print(f"Die Gesamtlänge der Leitung beträgt: {laenge:.2f} Meter")
     else:
-        print("Berechnung fehlgeschlagen.")
+        print("Berechnung fehlgeschlagen.") 

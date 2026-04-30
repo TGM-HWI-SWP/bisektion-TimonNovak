@@ -43,8 +43,8 @@ if __name__ == "__main__":
     
     # Test 1: Genauigkeit 10^-2
     ergebnis_1 = bisektion_test_p4(start_a, start_b, 10**-2)
-    print(f"Ergebnis (1e-2): {ergebnis_1:.4f}\n")
+    print(f"Ergebnis (10**-2): {ergebnis_1:.4f}\n")
 
     # Test 2: Genauigkeit 10^-8
     ergebnis_2 = bisektion_test_p4(start_a, start_b, 10**-8)
-    print(f"Ergebnis (1e-8): {ergebnis_2:.8f}")
+    print(f"Ergebnis (10**-8): {ergebnis_2:.8f}")
