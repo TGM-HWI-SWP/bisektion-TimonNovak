@@ -5,7 +5,7 @@ def berechne(formel, x):
 
 def regula_falsi_löser(funktion, a, b, genauigkeit=1e-7):
     """
-    Hier nutzen wir die Sekanten-Formel aus dem PDF, 
+    Hier nutzen wir die Sekanten-Formel, 
     um die Nullstelle schneller zu finden.
     """
     try:
@@ -18,8 +18,6 @@ def regula_falsi_löser(funktion, a, b, genauigkeit=1e-7):
 
         # Wir machen maximal 100 Schritte, damit sich das Programm nicht aufhängt
         for schritt in range(100):
-            # Das ist die Formel aus deinem Aufgabenblatt:
-            # c = b - f(b) * (b - a) / (f(b) - f(a))
             c = b - fb * ((b - a) / (fb - fa))
             fc = berechne(funktion, c)
 
@@ -27,7 +25,7 @@ def regula_falsi_löser(funktion, a, b, genauigkeit=1e-7):
             if abs(fc) < genauigkeit:
                 return c
             
-            # Das neue Intervall festlegen, genau wie bei der Bisektion[cite: 1]
+            # Das neue Intervall festlegen, genau wie bei der Bisektion
             if fa * fc < 0:
                 b, fb = c, fc
             else:
@@ -37,7 +35,7 @@ def regula_falsi_löser(funktion, a, b, genauigkeit=1e-7):
         print("Fehler: Division durch Null!")
         return None
 
-# --- Testlauf mit deiner Katalognummer 12 ---
+#Testlauf mit Katalognummer
 n = 12
 ergebnis_rf = regula_falsi_löser(f"x**2 - {n}", 0, 24) 
 
