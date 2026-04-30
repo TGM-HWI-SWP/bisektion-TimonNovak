@@ -42,7 +42,7 @@ def bisektion_löser(funktion: str, a: float, b: float, genauigkeit: float = 1e-
         print(f"Da lief was schief: {fehler}")
         return None
 
-# Test mit den Werten aus dem Projektblatt (n=25, 81, 144)
+# Test mit den Werten von alter Aufgabe (n=25, 81, 144)
 if __name__ == "__main__":
     zahlen = [25, 81, 144]
     print("--- Testläufe der Wurzelfunktionen ---")
